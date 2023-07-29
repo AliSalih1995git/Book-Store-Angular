@@ -1,0 +1,17 @@
+<h1>Products</h1>
+<div class="container d-flex flex-wrap gap-2 w-100">
+  <div class="card col-lg-3 col-md-4 col-12" *ngFor="let item of AllBooksData">
+    <img src="{{ item.image }}" class="rowimg card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <span class="card-text text-success">{{ item.price }}</span>
+    </div>
+
+    <div class="card-body">
+      <a [routerLink]="['/productItem', item.isbn13]" class="card-link"
+        >Product View</a
+      >
+      <a href="#" class="card-link"> <i class="bi bi-cart4"></i></a>
+    </div>
+  </div>
+</div>

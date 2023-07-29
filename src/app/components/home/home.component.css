@@ -1,0 +1,12 @@
+.rowimg {
+  object-fit: contain;
+  width: 100%;
+  box-sizing: content-box;
+  transition: transform 450ms;
+  margin-right: 7px;
+}
+
+.rowimg:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
