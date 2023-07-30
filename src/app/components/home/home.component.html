@@ -11,7 +11,9 @@
       <a [routerLink]="['/productItem', item.isbn13]" class="card-link"
         >Product View</a
       >
-      <a href="#" class="card-link"> <i class="bi bi-cart4"></i></a>
+      <a href="#" class="card-link" (click)="addToCart(item)">
+        <i class="bi bi-cart4"></i
+      ></a>
     </div>
   </div>
 </div>

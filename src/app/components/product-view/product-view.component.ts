@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Books } from 'src/app/BooksScheema';
 import { ApiServiceService } from 'src/app/service/api-service.service';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-product-view',
@@ -11,6 +12,7 @@ import { ApiServiceService } from 'src/app/service/api-service.service';
 export class ProductViewComponent implements OnInit {
   constructor(
     private service: ApiServiceService,
+    private cartService: CartService,
     private router: ActivatedRoute
   ) {}
 
@@ -26,5 +28,10 @@ export class ProductViewComponent implements OnInit {
       this.singleProductData = res;
       console.log(this.singleProductData);
     });
+  }
+  addToCart(book: Books) {
+    console.log('Clicked');
+
+    this.cartService.addToCart(book);
   }
 }

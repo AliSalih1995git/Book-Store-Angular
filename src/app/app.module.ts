@@ -8,10 +8,25 @@ import { ProductViewComponent } from './components/product-view/product-view.com
 import { HttpClientModule } from '@angular/common/http';
 import { ApiServiceService } from './service/api-service.service';
 import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductViewComponent, CartComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProductViewComponent,
+    CartComponent,
+    LoginComponent,
+    RegisterComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent],
 })

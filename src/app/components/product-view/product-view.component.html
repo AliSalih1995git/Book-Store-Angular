@@ -28,7 +28,7 @@
             <li class="list-group-item text-success">
               Price : {{ singleProductData?.price }}
             </li>
-            <a routerLink="/cart" class="btn btn-success">
+            <a class="btn btn-success" (click)="addToCart(singleProductData)">
               <i class="bi bi-cart4"></i>Add to cart</a
             >
           </ul>
