@@ -1,0 +1,39 @@
+<div class="card mb-3">
+  <div class="row g-0" *ngIf="singleProductData">
+    <div class="col-md-4">
+      <img
+        src="{{ singleProductData?.image }}"
+        class="img-fluid"
+        alt="Product Image"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ singleProductData?.title }}</h5>
+        <span>({{ singleProductData?.authors }})</span>
+        <p class="card-text">
+          {{ singleProductData?.desc }}
+        </p>
+        <div class="card-text">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-muted">
+              Author : {{ singleProductData?.authors }}
+            </li>
+            <li class="list-group-item text-muted">
+              Publisher : {{ singleProductData?.publisher }}
+            </li>
+            <li class="list-group-item text-muted">
+              Year : {{ singleProductData?.year }}
+            </li>
+            <li class="list-group-item text-success">
+              Price : {{ singleProductData?.price }}
+            </li>
+            <a routerLink="/cart" class="btn btn-success">
+              <i class="bi bi-cart4"></i>Add to cart</a
+            >
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
