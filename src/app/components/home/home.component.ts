@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
     private cartService: CartService
   ) {}
   AllBooksData: Books[] = [];
-
   ngOnInit(): void {
     this.getAllBooks();
   }

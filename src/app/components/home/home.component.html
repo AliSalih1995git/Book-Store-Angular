@@ -4,7 +4,9 @@
     <img src="{{ item.image }}" class="rowimg card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ item.title }}</h5>
-      <span class="card-text text-success">{{ item.price }}</span>
+      <span class="card-text text-success">{{
+        item.price | currencyConversion
+      }}</span>
     </div>
 
     <div class="card-body">

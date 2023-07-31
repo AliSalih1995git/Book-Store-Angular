@@ -1,0 +1,52 @@
+<div class="d-flex flex-column justify-content-center align-items-center m-4">
+  <h3 class="text-uppercase">login</h3>
+  <form
+    class="card w-25 p-4"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit(loginForm)"
+  >
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter email"
+        formControlName="email"
+      />
+      <small
+        *ngIf="AllControles?.email?.errors?.['email'] && submitted"
+        id="email"
+        class="form-text text-danger"
+        >Invalid email</small
+      >
+      <small
+        *ngIf="AllControles?.email?.errors && submitted"
+        id="email"
+        class="form-text text-danger"
+        >Email is required</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <small
+        *ngIf="AllControles?.password?.errors && submitted"
+        id="password"
+        class="form-text text-danger"
+        >Password is required
+      </small>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Submit</button>
+    <span class="mt-2"
+      >Don't have an account? <a routerLink="/register">Register</a></span
+    >
+  </form>
+</div>

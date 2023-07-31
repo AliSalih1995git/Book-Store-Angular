@@ -63,13 +63,9 @@ export class CartComponent implements OnInit {
     }
   }
 
-  checkout(): void {
-    console.log('Checkout clicked');
-  }
-
-  clearCart() {
-    this.service.clearCart();
-    this.cartItems = [];
-    this.updateCart();
-  }
+  // clearCart() {
+  //   this.service.clearCart();
+  //   this.cartItems = [];
+  //   this.updateCart();
+  // }
 }
