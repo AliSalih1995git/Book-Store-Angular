@@ -1,0 +1,9 @@
+<div class="d-flex flex-column justify-content-center align-items-center m-4">
+  <div class="card w-50 p-4" *ngIf="profileData">
+    <span>Name : {{ profileData.fullname }}</span>
+    <span>Email : {{ profileData.email }}</span>
+  </div>
+  <div *ngIf="!profileData">
+    <p>Loading...</p>
+  </div>
+</div>

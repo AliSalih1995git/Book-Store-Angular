@@ -20,7 +20,36 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-flex">
+          <span>
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="login"
+              *ngIf="!isLoggedIn"
+              >Login</a
+            >
+          </span>
+          <span>
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="/login"
+              (click)="logout()"
+              *ngIf="isLoggedIn"
+              >Logout</a
+            >
+          </span>
+          <span>
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="/profile"
+              *ngIf="isLoggedIn"
+              >profile</a
+            >
+          </span>
+
           <a
             type="button"
             class="btn btn-success position-relative"
@@ -31,23 +60,15 @@
             <span
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
             >
-              99+
+              {{ cartItemsCount }}
             </span>
           </a>
-          <!-- <a class="btn btn-success" href="#"
-            >Cart
-            <span
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            >
-              99+
-            </span></a
-          > -->
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <!-- End navbar  -->
-<section class="container-fluid mt-1">
+<section class="container-fluid mt-1 w-100 h-auto">
   <router-outlet></router-outlet>
 </section>

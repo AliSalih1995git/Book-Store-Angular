@@ -4,14 +4,18 @@
     <img src="{{ item.image }}" class="rowimg card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ item.title }}</h5>
-      <span class="card-text text-success">{{ item.price }}</span>
+      <span class="card-text text-success">{{
+        item.price | currencyConversion
+      }}</span>
     </div>
 
     <div class="card-body">
       <a [routerLink]="['/productItem', item.isbn13]" class="card-link"
         >Product View</a
       >
-      <a href="#" class="card-link"> <i class="bi bi-cart4"></i></a>
+      <a href="#" class="card-link" (click)="addToCart(item)">
+        <i class="bi bi-cart4"></i
+      ></a>
     </div>
   </div>
 </div>
