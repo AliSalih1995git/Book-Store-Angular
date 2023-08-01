@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
-  private backendUrl = 'http://localhost:5001';
+  private backendUrl =
+    'https://bookstore-angular-bakend.onrender.com' || ' http://localhost:5001';
 
   register(formData: any): Observable<any> {
     return this.http.post(`${this.backendUrl}/auth/register`, formData);
